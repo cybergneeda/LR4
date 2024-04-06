@@ -1,7 +1,7 @@
 public abstract class Fruit {
     private static int i=0;
     private int id;
-    public  double getWeight(){return 0;};
+    public abstract double getWeight();
     public Fruit()
     {
         id=i;

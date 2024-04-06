@@ -4,7 +4,4 @@ public class Persimmon extends Fruit {
     public double getWeight() {
         return weight;
     }
-
-
-    
 }

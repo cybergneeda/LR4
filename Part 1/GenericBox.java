@@ -4,7 +4,6 @@ public class GenericBox<T extends Fruit> {
     private T fruit;
     private int number;
     
-    
     public GenericBox(T fruit, int number) {
         this.fruit = fruit;
         this.number = number;
@@ -52,8 +51,7 @@ public class GenericBox<T extends Fruit> {
     {
         System.out.println("Перенесли "+ number+ " фруктов в первую коробку");
     }
-}
-
+    }
     }
     public void compareTo(GenericBox<?> o) {
         if (this.calculateWeight()-o.calculateWeight()>0)
@@ -76,7 +74,6 @@ public class GenericBox<T extends Fruit> {
        
         return Objects.hash(fruit,number);
     }
-
 
     @Override
     public boolean equals(Object obj) {
