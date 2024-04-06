@@ -44,7 +44,8 @@ public class LambdaToMethod {
         System.out.print("\033[H\033[2J");
         Integer[] array =new Integer[8];
         Random r= new Random();
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++)
+         {
             array[i] = r.nextInt(10);
         }
         System.out.println("Исходный массив: "+Arrays.toString(array));
