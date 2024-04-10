@@ -95,7 +95,8 @@ public class GenericBox<T extends Fruit> {
     }
 
     @Override
-    public String toString() {    
+    public String toString() {
+    
             return "В первой коробке лежит " + number + this.fruit;
         
     }
