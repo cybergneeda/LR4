@@ -4,4 +4,10 @@ public class Persimmon extends Fruit {
     public double getWeight() {
         return weight;
     }
+
+    @Override
+    public String toString() {
+        return " хурм";
+    }
+    
 }

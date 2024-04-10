@@ -4,5 +4,10 @@ public class Apple extends Fruit {
     public double getWeight() {
         return weight;
     }
+
+    @Override
+    public String toString() {
+        return " яблок";
+    }
     
 }
