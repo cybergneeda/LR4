@@ -95,14 +95,8 @@ public class GenericBox<T extends Fruit> {
     }
 
     @Override
-    public String toString() {
-        if (this.getFruit().getId()==0) {
+    public String toString() {    
             return "В первой коробке лежит " + number + this.fruit;
-        }
-        else
-        {
-            return "Во второй коробке лежит " + number + this.fruit;
-        }
         
     }
 
