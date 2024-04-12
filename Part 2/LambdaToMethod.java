@@ -22,17 +22,7 @@ public class LambdaToMethod {
         return (double)sum/array.length;
     }
 
-    Function<Integer[],Integer> findMin = array ->
-    {
-        int min=array[0];
-        for (int i = 1; i < array.length; i++) {
-            if (array[i]<min)
-            {
-                min = array[i];
-            }
-        }
-        return min;
-    };
+    
 
     public static <T> T lambdaMethod(Function<Integer[],T> function,Integer[] array)
     {
@@ -48,10 +38,21 @@ public class LambdaToMethod {
          {
             array[i] = r.nextInt(10);
         }
+        Function<Integer[],Integer> findMin = myArray ->
+    {
+        int min=array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i]<min)
+            {
+                min = array[i];
+            }
+        }
+        return min;
+    };
         System.out.println("Исходный массив: "+Arrays.toString(array));
         LambdaToMethod lambdaToMethod= new LambdaToMethod();
         System.out.println("Сумма элементов массива: "+ lambdaMethod(LambdaToMethod::arraySum ,array));
         System.out.println("Среднее значение элементов массива: "+lambdaMethod(lambdaToMethod::arrayAverage,array ));
-        System.out.println("Наименьший элемент массива: "+lambdaMethod(lambdaToMethod.findMin,array));
+        System.out.println("Наименьший элемент массива: "+lambdaMethod(findMin,array));
     }
 }
